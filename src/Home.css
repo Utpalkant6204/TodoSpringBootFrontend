@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+.header_text{
+    font-family: 'GT Pressura Mono';
+    color: rgb(189, 247, 227);
+}
+.text{
+    border: 1px solid black;
+    text-align: center;
+    width: 30%;
+    
+}
+
+.btn{
+    font-family: 'GT Pressura';
+    color: aliceblue;
+}
+
+.textbar{
+    border-radius: 5px;
+    background-color:rgb(252, 247, 247);
+    cursor: pointer;
+}
+
+/* .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 22, 20);
+}
+
+.header_text{
+    font-family: 'GT Pressura Mono';
+    color: rgb(189, 247, 227);
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; 
+}
+
+.form {
+    margin-bottom: 20px; 
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-list p {
+    margin: 5px 0;
+} */

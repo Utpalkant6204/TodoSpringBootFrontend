@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "GT Pressura";
+  src: url("./assets/gt-pressura-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Pressura";
+  src: url("./assets/gt-pressura-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Pressura Mono";
+  src: url("./assets/gt-pressura-mono-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT Pressura Mono";
+  src: url("./assets/gt-pressura-mono-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("./assets/freight-text-bold-web-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight";
+  src: url("./assets/freight-text-regular-web-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
