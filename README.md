@@ -16,7 +16,7 @@ git clone <Project_Link>
 ### run on the local Host
 
 ```bash
-  cd <Project name i.e. pokemon>
+  cd <Project name>
 ```
 
 ### installing all dependicies
