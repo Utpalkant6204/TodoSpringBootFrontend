@@ -5,6 +5,7 @@ const Modal = ({ closeModal, fetchData, editTodo, isEditModalOpen }) => {
   console.log(isEditModalOpen);
   const [input, setInput] = useState(editTodo ? editTodo.data : "");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setInput(editTodo ? editTodo.data : "");
@@ -12,11 +13,18 @@ const Modal = ({ closeModal, fetchData, editTodo, isEditModalOpen }) => {
 
   const handleChange = (e) => {
     setInput(e.target.value);
+    setError(false);
   };
 
   const handleClick = async (e) => {
     e.preventDefault();
     console.log(input);
+
+    if (input.trim() == "") {
+      setError(!error);
+      return;
+    }
+
     try {
       setIsLoading(true);
       if (editTodo) {
@@ -66,7 +74,9 @@ const Modal = ({ closeModal, fetchData, editTodo, isEditModalOpen }) => {
             <input
               type="text"
               placeholder="Enter item..."
-              className="border border-gray-300 rounded-md px-3 py-2 mb-4 mx-2"
+              className={`border border-gray-300 rounded-md px-3 py-2 mb-4 mx-2 ${
+                error ? 'border-red-500' : ''
+              }`}
               value={input}
               onChange={handleChange}
             />
@@ -79,6 +89,9 @@ const Modal = ({ closeModal, fetchData, editTodo, isEditModalOpen }) => {
               {isLoading ? "Processing..." : editTodo ? "Update" : "Add"}
             </button>
           </form>
+          {error && (
+            <span className="text-red-500">Please write some text to save</span>
+          )}
         </div>
       </div>
     </div>
