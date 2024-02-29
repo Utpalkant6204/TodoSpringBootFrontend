@@ -16,7 +16,9 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await Axios.get("https://todospringbootbackend.onrender.com/getTodos");
+      const response = await Axios.get(
+        "https://todospringbootbackend.onrender.com/getTodos"
+      );
       console.log(response.data);
       setTodos(response.data);
     } catch (error) {
@@ -39,7 +41,9 @@ const Home = () => {
   const handleDelete = async (id) => {
     console.log(id);
     try {
-      const res = await Axios.delete(`https://todospringbootbackend.onrender.com/deleteTodo/${id}`);
+      const res = await Axios.delete(
+        `https://todospringbootbackend.onrender.com/deleteTodo/${id}`
+      );
       if (res.status === 200) {
         setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
       }
@@ -57,7 +61,9 @@ const Home = () => {
   return (
     <div>
       <div className="bg-gray-900 flex items-center justify-center p-5">
-        <p className="header_text text-3xl">Todo Spring Boot App</p>
+        <p className="header_text text-3xl max-[640px]:text-2xl">
+          Todo Spring Boot App
+        </p>
       </div>
 
       <div className="flex flex-col items-center justify-center mt-10">
@@ -86,7 +92,7 @@ const Home = () => {
 
         <button
           type="button"
-          className="bg-blue-500 hover:bg-blue-700 mb-2 block w-[30%] rounded border-2 border-primary px-6 pb-[6px] pt-2 uppercase leading-normal transition duration-150 ease-in-out hover:border-primary-600 text-lg btn "
+          className="bg-blue-500 hover:bg-blue-700 mb-2 block w-[30%] rounded border-2 border-primary px-6 pb-[6px] pt-2 uppercase leading-normal transition duration-150 ease-in-out hover:border-primary-600 text-lg btn max-[640px]:w-[50%]"
           data-te-ripple-init
           onClick={openModal}
         >
