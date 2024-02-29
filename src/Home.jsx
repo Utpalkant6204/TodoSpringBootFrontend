@@ -70,7 +70,7 @@ const Home = () => {
         {Todos.map((todo) => (
           <div
             key={todo.id}
-            className="mb-4 p-2 border rounded-lg flex justify-between items-center textbar w-[30%] transition duration-300 ease-in-out hover:scale-x-105 "
+            className="mb-4 p-2 border rounded-lg flex justify-between items-center textbar w-[30%] transition duration-300 ease-in-out hover:scale-x-105 max-[640px]:w-[80%]"
           >
             <div className="text-base textbar1">{todo.data}</div>
             <div>
@@ -92,7 +92,7 @@ const Home = () => {
 
         <button
           type="button"
-          className="bg-blue-500 hover:bg-blue-700 mb-2 block w-[30%] rounded border-2 border-primary px-6 pb-[6px] pt-2 uppercase leading-normal transition duration-150 ease-in-out hover:border-primary-600 text-lg btn max-[640px]:w-[50%]"
+          className="bg-blue-500 hover:bg-blue-700 mb-2 block w-[30%] rounded border-2 border-primary px-6 pb-[6px] pt-2 uppercase leading-normal transition duration-150 ease-in-out hover:border-primary-600 text-lg btn max-[640px]:w-[80%]"
           data-te-ripple-init
           onClick={openModal}
         >
